@@ -1,1 +1,291 @@
-<!DOCTYPE html><html lang="en-us"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Shubham Tiwari</title><link rel="canonical" href="http://codekirei.com"><link rel="author" href="http://codekirei.com/about"><link rel="stylesheet" href="/code/style.css"><meta name="description" content="Hello world"><meta name="msapplication-TileColor" content="#FFFFFF"><meta name="msapplication-TileImage" content="/favicon-144.png"><link rel="apple-touch-icon-precomposed" sizes="180x180" href="/favicon-180.png"><link rel="apple-touch-icon-precomposed" sizes="152x152" href="/favicon-152.png"><link rel="apple-touch-icon-precomposed" sizes="120x120" href="/favicon-120.png"><link rel="apple-touch-icon-precomposed" sizes="76x76" href="/favicon-76.png"></head><body class="body index has-banner"><a class="menu-toggle" role="button" href="#footer-nav" aria-label="Open navigation menu"><div class="menu-toggle__icon"></div></a><nav class="menu" role="navigation"><ul class="menu__list"><li class="menu__item"><a class="menu__link" href="/">Blog</a></li><li class="menu__item"><a class="menu__link" href="/projects">Projects</a></li><li class="menu__item"><a class="menu__link" href="/about">About</a></li></ul></nav><header class="banner" role="banner"><div class="banner__content"><h1 class="banner__title">Shubham Tiwari</h1><div class="banner__subtitles"><h2 class="banner__subtitle">Clean Design.</h2><h2 class="banner__subtitle">Beautiful Code</h2></div></div><div class="scroll-down"><a class="scroll-down__link" href="#scroll-to" role="button" data-scroll><svg class="scroll-down__svg" viewBox="0 0 658 1024"><path d="M614.286 420.571q0 7.429-5.714 13.143l-266.286 266.286q-5.714 5.714-13.143 5.714t-13.143-5.714l-266.286-266.286q-5.714-5.714-5.714-13.143t5.714-13.143l28.571-28.571q5.714-5.714 13.143-5.714t13.143 5.714l224.571 224.571 224.571-224.571q5.714-5.714 13.143-5.714t13.143 5.714l28.571 28.571q5.714 5.714 5.714 13.143z"></path></svg></a></div></header><main id="scroll-to" role="main"><section class="blog"><article class="post" role="article"><a class="post__title" href="/posts/currying-with-arrow-functions"><h3>Currying and ES6 Arrow Functions</h3></a><div class="post__meta"><time class="post__date replace-time" datetime="2016-01-11T12:00-08:00">1/11/2016</time><span class="post__dash"> &mdash; </span><span class="post__ert">10 minute read</span></div><div class="post__preview"><p>Combine ES6's arrow functions with currying, a concept used often in functional programming, for concise, composable, testable JavaScript.</p></div><a class="post__read-button" href="/posts/currying-with-arrow-functions"><span class="post__read-button__text">read more</span><svg class="post__read-button__svg" viewBox="0 0 366 1024"><path d="M340 548.571q0 7.429-5.714 13.143l-266.286 266.286q-5.714 5.714-13.143 5.714t-13.143-5.714l-28.571-28.571q-5.714-5.714-5.714-13.143t5.714-13.143l224.571-224.571-224.571-224.571q-5.714-5.714-5.714-13.143t5.714-13.143l28.571-28.571q5.714-5.714 13.143-5.714t13.143 5.714l266.286 266.286q5.714 5.714 5.714 13.143z"></path></svg></a></article></section></main><footer class="site-footer"><div class="site-footer__content"><nav class="footer-nav" id="footer-nav" role="navigation"><ul class="footer-nav__list"><li class="footer-nav__item"><a class="footer-nav__link" href="/">Blog</a></li><li class="footer-nav__item"><a class="footer-nav__link" href="/projects">Projects</a></li><li class="footer-nav__item"><a class="footer-nav__link" href="/about">About</a></li></ul></nav><hr class="site-footer__divider"><a class="site-footer__info" href="/colophon" role="button" ariaLabel="About the site"><svg class="site-footer__info-svg" viewBox="0 0 877.7142857142858 1024"><path d="M585.143 786.286v-91.429q0-8-5.143-13.143t-13.143-5.143h-54.857v-292.571q0-8-5.143-13.143t-13.143-5.143h-182.857q-8 0-13.143 5.143t-5.143 13.143v91.429q0 8 5.143 13.143t13.143 5.143h54.857v182.857h-54.857q-8 0-13.143 5.143t-5.143 13.143v91.429q0 8 5.143 13.143t13.143 5.143h256q8 0 13.143-5.143t5.143-13.143zM512 274.286v-91.429q0-8-5.143-13.143t-13.143-5.143h-109.714q-8 0-13.143 5.143t-5.143 13.143v91.429q0 8 5.143 13.143t13.143 5.143h109.714q8 0 13.143-5.143t5.143-13.143zM877.714 512q0 119.429-58.857 220.286t-159.714 159.714-220.286 58.857-220.286-58.857-159.714-159.714-58.857-220.286 58.857-220.286 159.714-159.714 220.286-58.857 220.286 58.857 159.714 159.714 58.857 220.286z"></path></svg></a></div></footer><script src="/code/bundle.js" async></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shubham Tiwari &mdash; Solutions Architect</title>
+<meta name="description" content="Shubham Tiwari is a solutions architect in Lucknow, India. He works on the parts of a system that decide whether it holds up: service boundaries, contracts, data, and the pipelines that ship them.">
+<link rel="canonical" href="https://lockround.github.io/">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Shubham Tiwari &mdash; Solutions Architect">
+<meta property="og:description" content="Service boundaries, contracts, data, and the pipelines that ship them.">
+<meta property="og:url" content="https://lockround.github.io/">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/favicon-144.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/favicon-152.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/favicon-120.png">
+<link rel="stylesheet" href="/css/portfolio.css">
+</head>
+<body>
+
+<header class="sheet masthead">
+  <p class="wordmark">
+    <strong class="wordmark__name">Shubham Tiwari</strong>
+    <span class="wordmark__role">Solutions Architect</span>
+  </p>
+  <nav class="masthead__nav" aria-label="Sections">
+    <ul>
+      <li><a href="#approach">Approach</a></li>
+      <li><a href="#capabilities">Capabilities</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#writing">Writing</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="sheet">
+
+  <div class="hero">
+    <h1 class="hero__title">I design the parts that decide whether a system holds&nbsp;up.</h1>
+    <p class="hero__lede">Shubham Tiwari, solutions architect. I work on the unglamorous parts that decide whether a system holds up &mdash; and I write down why, so the next person can change it without breaking&nbsp;it.</p>
+    <ul class="hero__facts">
+      <li>Lucknow, India</li>
+      <li><span class="signal">&#9679;</span> Open to consulting and full&#8209;time roles</li>
+      <li><a href="/posts/my-2018">Writing and building in the open</a></li>
+    </ul>
+
+    <figure class="drawing">
+      <figcaption class="drawing__caption">The path a request takes. Every hop is a decision someone has to own.</figcaption>
+      <ol class="path">
+        <li class="path__node">
+          <span class="path__n" aria-hidden="true">1</span>
+          <h2 class="path__name">Client</h2>
+          <p class="path__question">Who the change is really for, and what it costs them when it is wrong.</p>
+        </li>
+        <li class="path__node">
+          <span class="path__n" aria-hidden="true">2</span>
+          <h2 class="path__name">Edge</h2>
+          <p class="path__question">Where traffic, latency, and failure get decided.</p>
+        </li>
+        <li class="path__node">
+          <span class="path__n" aria-hidden="true">3</span>
+          <h2 class="path__name">Service</h2>
+          <p class="path__question">Boundaries, contracts, and what each service is allowed to break.</p>
+        </li>
+        <li class="path__node">
+          <span class="path__n" aria-hidden="true">4</span>
+          <h2 class="path__name">Data</h2>
+          <p class="path__question">Who owns the truth, and whether it survives the next rewrite.</p>
+        </li>
+        <li class="path__node">
+          <span class="path__n" aria-hidden="true">5</span>
+          <h2 class="path__name">Operations</h2>
+          <p class="path__question">What tells you it broke, before a customer has to say so.</p>
+        </li>
+      </ol>
+    </figure>
+
+    <dl class="title-block">
+      <div class="title-block__cell">
+        <dt>Project</dt>
+        <dd>Shubham Tiwari &mdash; portfolio</dd>
+      </div>
+      <div class="title-block__cell">
+        <dt>Role</dt>
+        <dd>Solutions Architect</dd>
+      </div>
+      <div class="title-block__cell">
+        <dt>Based in</dt>
+        <dd>Lucknow, India</dd>
+      </div>
+      <div class="title-block__cell">
+        <dt>Contact</dt>
+        <dd>npm.init.y@gmail.com</dd>
+      </div>
+      <div class="title-block__cell">
+        <dt>Focus</dt>
+        <dd>Distributed systems, API design, delivery</dd>
+      </div>
+      <div class="title-block__cell">
+        <dt>Status</dt>
+        <dd>Available for new work</dd>
+      </div>
+    </dl>
+  </div>
+
+  <section class="section" id="approach" aria-labelledby="approach-title">
+    <p class="section__label">Approach</p>
+    <div class="section__body">
+      <h2 id="approach-title">Three habits that survive contact with a real deadline.</h2>
+      <dl>
+        <div class="principle">
+          <dt>Start from the constraint</dt>
+          <dd>Not from the stack. From the team that has to maintain it, the traffic it must survive, the budget, and the date. Most bad architectures are a good technology answering a problem nobody actually has.</dd>
+        </div>
+        <div class="principle">
+          <dt>Buy before you build</dt>
+          <dd>A managed service is usually the cheaper answer, and the interesting work is the part that is genuinely specific to the problem. The job is knowing which is which, early, before anyone has written code.</dd>
+        </div>
+        <div class="principle">
+          <dt>Leave a trail</dt>
+          <dd>Decisions, not just diagrams. If it cannot be explained in a paragraph, it cannot be changed safely by somebody who was not there when it was built.</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="section" id="capabilities" aria-labelledby="capabilities-title">
+    <p class="section__label">Capabilities</p>
+    <div class="section__body">
+      <h2 id="capabilities-title">What I can actually do, grouped by the job.</h2>
+      <p class="lede">Deep enough to lead the work, honest about where I am still learning.</p>
+      <dl class="spec">
+        <div class="spec__group">
+          <dt>Architecture</dt>
+          <dd>
+            <span>Distributed systems</span>
+            <span>Service boundaries and contracts</span>
+            <span>REST and GraphQL API design</span>
+            <span>Data modelling, PostgreSQL</span>
+            <span>Caching and load shedding</span>
+          </dd>
+        </div>
+        <div class="spec__group">
+          <dt>Cloud &amp; operations</dt>
+          <dd>
+            <span>AWS Lambda, serverless</span>
+            <span>Deployment pipelines</span>
+            <span>Linux and Unix</span>
+            <span>Bash</span>
+          </dd>
+        </div>
+        <div class="spec__group">
+          <dt>Delivery</dt>
+          <dd>
+            <span>Git</span>
+            <span>Travis, CircleCI</span>
+            <span>Webpack, Babel, ESLint, Parcel</span>
+          </dd>
+        </div>
+        <div class="spec__group">
+          <dt>Interface</dt>
+          <dd>
+            <span>HTML, semantic markup</span>
+            <span>CSS: Sass, PostCSS, responsive design</span>
+            <span>React, with Redux and React&nbsp;Router</span>
+          </dd>
+        </div>
+        <div class="spec__group">
+          <dt>Programming</dt>
+          <dd>
+            <span>JavaScript, TypeScript, ES6/ES7</span>
+            <span>Python, Java</span>
+            <span>SQL</span>
+          </dd>
+        </div>
+        <div class="spec__group">
+          <dt>Testing</dt>
+          <dd>
+            <span>Mocha, Jest</span>
+            <span>Making the hard part testable first</span>
+          </dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="section" id="work" aria-labelledby="work-title">
+    <p class="section__label">Selected work</p>
+    <div class="section__body">
+      <h2 id="work-title">Things I have built and can talk about in detail.</h2>
+      <ul class="entries">
+        <li>
+          <div class="entries__head">
+            <h3>e-store</h3>
+            <span class="entries__tag">stable</span>
+          </div>
+          <p>An e-commerce store you can prototype on top of, built on an industry standard kickstarter.</p>
+          <ul class="links">
+            <li><a href="https://bitbucket.org/lockround/e-store">source</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="entries__head">
+            <h3>gitrub</h3>
+            <span class="entries__tag">in progress</span>
+          </div>
+          <p>A web-based hosting service for version control. It carries the distributed version control and source code management functionality of Git across a browser, for any kind of file rather than only program code.</p>
+          <ul class="links">
+            <li><a href="https://bitbucket.org/lockround/gitrub">source</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="entries__head">
+            <h3>videocloud</h3>
+            <span class="entries__tag">in progress</span>
+          </div>
+          <p>A very early concept of a standalone terminfo parser in Node.js. It reads the output of infocmp today; the intent is to eventually process terminfo files directly. Inspired by the parser in chjj&rsquo;s monolithic <code>blessed</code>.</p>
+          <ul class="links">
+            <li><a href="https://github.com/fiftify/videocloud">source</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="entries__head">
+            <h3>lockround.github.io</h3>
+            <span class="entries__tag">ongoing</span>
+          </div>
+          <p>This site. Hand-written HTML and CSS, no framework, no build step &mdash; which is the point.</p>
+          <ul class="links">
+            <li><a href="https://github.com/lockround/lockround.github.io">source</a></li>
+            <li><a href="/colophon">how it is put together</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" id="writing" aria-labelledby="writing-title">
+    <p class="section__label">Writing</p>
+    <div class="section__body">
+      <h2 id="writing-title">Notes, mostly to think out loud.</h2>
+      <ul class="entries">
+        <li>
+          <div class="entries__head">
+            <h3><a href="/posts/currying-with-arrow-functions">Currying and ES6 Arrow Functions</a></h3>
+            <span class="entries__tag">11 January 2016</span>
+          </div>
+          <p>Combining arrow functions with currying for concise, composable, testable JavaScript.</p>
+        </li>
+        <li>
+          <div class="entries__head">
+            <h3><a href="/posts/my-2018">How was my 2018</a></h3>
+            <span class="entries__tag">1 January 2019</span>
+          </div>
+          <p>What I got right and what I learned the hard way over the year.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="contact" id="contact" aria-labelledby="contact-title">
+    <p class="section__label">Contact</p>
+    <div class="section__body">
+      <h2 id="contact-title">The fastest way to reach me is email.</h2>
+      <ul class="contact__list">
+        <li>
+          <a href="mailto:npm.init.y@gmail.com">npm.init.y@gmail.com</a>
+          <span>Email &mdash; best for anything with detail in it</span>
+        </li>
+        <li>
+          <a href="https://github.com/lockround">github.com/lockround</a>
+          <span>GitHub &mdash; code, and the history of it</span>
+        </li>
+        <li>
+          <a href="https://m.me/shubhamtiwari0000">m.me/shubhamtiwari0000</a>
+          <span>Messenger &mdash; short questions</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <span>&copy; 2026 Shubham Tiwari</span>
+    <span><a href="/about">Longer bio</a> &nbsp;/&nbsp; <a href="/colophon">Colophon</a></span>
+  </footer>
+
+</main>
+
+</body>
+</html>
